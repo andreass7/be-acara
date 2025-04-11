@@ -28,6 +28,16 @@ const doc = {
         identifier: "andreas",
         password: "123456",
       },
+      RegisterRequest: {
+        fullName: "Andreas Adi",
+        username: "andreas",
+        email: "andre@example.co",
+        password: "123456",
+        confirmPassword: "123456",
+      },
+      ActivationRequest: {
+        code: "abcdef",
+      },
     },
   },
 };
