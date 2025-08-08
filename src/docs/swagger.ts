@@ -53,12 +53,27 @@ const doc = {
         location: {
           region: "region id",
           coordinates: [0, 0],
+          address: "",
         },
         isOnline: "false",
         isFeatured: "false",
+        isPublish: "false",
       },
       RemoveMediaRequest: {
         fileUrl: "",
+      },
+      CreateBannerRequest: {
+        title: "Banner 10 title",
+        image:
+          "https://res.cloudinary.com/dv6nzx26s/image/upload/v1754646637/lhpi2ab833z6boh7uqox.jpg",
+        isShow: false,
+      },
+      CreateTicketRequest: {
+        price: 2000,
+        name: "Acara",
+        events: "689573b300d9260ef8ba467d",
+        description: "Makan Makan",
+        quantity: 100,
       },
     },
   },
