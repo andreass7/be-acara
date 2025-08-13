@@ -118,6 +118,39 @@
         }
       }
     },
+    "/orders": {
+      "post": {
+        "tags": [
+          "Order"
+        ],
+        "description": "",
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": ""
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateOrderRequest"
+              }
+            },
+            "application/xml": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateOrderRequest"
+              }
+            }
+          }
+        }
+      }
+    },
     "/banners": {
       "post": {
         "tags": [
@@ -1263,6 +1296,26 @@
         },
         "xml": {
           "name": "CreateTicketRequest"
+        }
+      },
+      "CreateOrderRequest": {
+        "type": "object",
+        "properties": {
+          "events": {
+            "type": "string",
+            "example": "event object id"
+          },
+          "ticket": {
+            "type": "string",
+            "example": "ticket object id"
+          },
+          "quantity": {
+            "type": "number",
+            "example": 1
+          }
+        },
+        "xml": {
+          "name": "CreateOrderRequest"
         }
       }
     }
