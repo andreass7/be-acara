@@ -1,4 +1,4 @@
-import axios, { AxiosResponse } from "axios";
+import axios from "axios";
 import { MIDTRANS_SERVER_KEY, MIDTRANS_TRANSACTION_URL } from "./env";
 
 export interface Payment {
@@ -29,7 +29,7 @@ export default {
       }
     );
 
-    if (result.status !== 200) {
+    if (result.status !== 201) {
       throw new Error("payment failed");
     }
 
