@@ -1,12 +1,12 @@
 import { Response, Request } from "express";
 import { IPaginationQuery, IReqUser } from "../utils/interfaces";
-import CategoryModel, { categoryDAO } from "../models/category.model";
+import CategoryModel, { categoryDTO } from "../models/category.model";
 import response from "../utils/response";
 import { isValidObjectId } from "mongoose";
 export default {
   async create(req: IReqUser, res: Response) {
     try {
-      await categoryDAO.validate(req.body);
+      await categoryDTO.validate(req.body);
       const result = await CategoryModel.create(req.body);
       response.success(res, result, "success create category");
     } catch (error) {
