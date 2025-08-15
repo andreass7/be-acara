@@ -4,7 +4,7 @@ import response from "../utils/response";
 export default {
   serverRoute() {
     return (req: Request, res: Response, next: NextFunction) => {
-      response.notFound(res, "route not found");
+      response.notFound(res, "route was not found");
     };
   },
   serverError() {
