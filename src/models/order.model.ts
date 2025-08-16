@@ -18,9 +18,9 @@ export const orderDTO = Yup.object({
 export type TypeOrder = Yup.InferType<typeof orderDTO>;
 
 export enum OrderStatus {
-  PENDING = "PENDING",
-  COMPLETED = "COMPLETED",
-  CANCELLED = "CANCELLED",
+  PENDING = "pending",
+  COMPLETED = "completed",
+  CANCELLED = "cancelled",
 }
 
 export type TypeVoucher = {
