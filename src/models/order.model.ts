@@ -114,6 +114,12 @@ OrderSchema.pre("save", async function () {
       order_id: order.orderId,
     },
   });
+  if (!order.vouchers || this.vouchers.length === 0) {
+    order.vouchers = Array.from({ length: order.quantity }).map(() => ({
+      voucherId: getId(),
+      isPrint: false,
+    }));
+  }
 });
 
 const OrderModel = mongoose.model(ORDER_MODEL_NAME, OrderSchema);
