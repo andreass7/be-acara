@@ -152,7 +152,7 @@ router.get(
 );
 
 router.put(
-  "orders/:orderId/completed",
+  "/orders/:orderId/completed",
   [authMiddleware, aclMiddleware([ROLES.MEMBER])],
   orderController.complete
   /*
@@ -163,7 +163,7 @@ router.put(
   */
 );
 router.put(
-  "orders/:orderId/pending",
+  "/orders/:orderId/pending",
   [authMiddleware, aclMiddleware([ROLES.ADMIN])],
   orderController.pending
   /*
@@ -174,7 +174,7 @@ router.put(
   */
 );
 router.put(
-  "orders/:orderId/cancelled",
+  "/orders/:orderId/cancelled",
   [authMiddleware, aclMiddleware([ROLES.ADMIN])],
   orderController.cancelled
   /*

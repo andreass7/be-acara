@@ -325,7 +325,7 @@
         ]
       }
     },
-    "orders/{orderId}/completed": {
+    "/orders/{orderId}/completed": {
       "put": {
         "tags": [
           "Order"
@@ -353,7 +353,7 @@
         ]
       }
     },
-    "orders/{orderId}/pending": {
+    "/orders/{orderId}/pending": {
       "put": {
         "tags": [
           "Order"
@@ -381,7 +381,7 @@
         ]
       }
     },
-    "orders/{orderId}/cancelled": {
+    "/orders/{orderId}/cancelled": {
       "put": {
         "tags": [
           "Order"
